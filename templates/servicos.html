@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}Nossos Serviços - GS Contabilidade{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header section--gray">
+    <div class="page-header__container container">
+        <h1 class="page-header__title">Nossos Serviços</h1>
+        <p class="page-header__description">
+            Soluções contábeis completas para o seu negócio crescer com segurança
+        </p>
+    </div>
+</section>
+
+<!-- Services Detail Section -->
+<section class="services-detail section">
+    <div class="services-detail__container container">
+        <div class="service-detail">
+            <div class="service-detail__icon">
+                <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <div class="service-detail__content">
+                <h2 class="service-detail__title">Contabilidade Completa</h2>
+                <p class="service-detail__description">
+                    Gestão contábil, fiscal e tributária com total transparência e segurança. 
+                    Cuidamos de toda a parte burocrática para você focar no que realmente importa: 
+                    o crescimento do seu negócio.
+                </p>
+                <ul class="service-detail__list">
+                    <li><i class="fas fa-check"></i> Escrituração contábil completa</li>
+                    <li><i class="fas fa-check"></i> Balanços e demonstrativos</li>
+                    <li><i class="fas fa-check"></i> Apuração de impostos</li>
+                    <li><i class="fas fa-check"></i> Relatórios gerenciais</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-detail service-detail--reverse">
+            <div class="service-detail__icon">
+                <i class="fas fa-building"></i>
+            </div>
+            <div class="service-detail__content">
+                <h2 class="service-detail__title">Abertura de Empresa</h2>
+                <p class="service-detail__description">
+                    Abertura de CNPJ rápida e sem burocracia, do MEI ao Simples Nacional. 
+                    Orientamos sobre o melhor tipo de empresa e regime tributário para o seu negócio.
+                </p>
+                <ul class="service-detail__list">
+                    <li><i class="fas fa-check"></i> Consultoria sobre tipo de empresa</li>
+                    <li><i class="fas fa-check"></i> Registro na Junta Comercial</li>
+                    <li><i class="fas fa-check"></i> Obtenção de CNPJ</li>
+                    <li><i class="fas fa-check"></i> Alvarás e licenças</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-detail">
+            <div class="service-detail__icon">
+                <i class="fas fa-percentage"></i>
+            </div>
+            <div class="service-detail__content">
+                <h2 class="service-detail__title">Planejamento Tributário</h2>
+                <p class="service-detail__description">
+                    Redução legal de impostos com enquadramento correto da sua empresa. 
+                    Analisamos seu negócio e encontramos a melhor forma de economizar nos tributos.
+                </p>
+                <ul class="service-detail__list">
+                    <li><i class="fas fa-check"></i> Análise do regime tributário</li>
+                    <li><i class="fas fa-check"></i> Enquadramento no Simples Nacional</li>
+                    <li><i class="fas fa-check"></i> Redução legal de impostos</li>
+                    <li><i class="fas fa-check"></i> Simulações e projeções</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-detail service-detail--reverse">
+            <div class="service-detail__icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="service-detail__content">
+                <h2 class="service-detail__title">Folha de Pagamento</h2>
+                <p class="service-detail__description">
+                    Gestão completa de funcionários, pró-labore e encargos trabalhistas. 
+                    Garantimos o cumprimento de todas as obrigações legais.
+                </p>
+                <ul class="service-detail__list">
+                    <li><i class="fas fa-check"></i> Admissão e demissão de funcionários</li>
+                    <li><i class="fas fa-check"></i> Folha de pagamento mensal</li>
+                    <li><i class="fas fa-check"></i> Cálculo de férias e 13º salário</li>
+                    <li><i class="fas fa-check"></i> Obrigações acessórias (eSocial, FGTS)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-detail">
+            <div class="service-detail__icon">
+                <i class="fas fa-chart-pie"></i>
+            </div>
+            <div class="service-detail__content">
+                <h2 class="service-detail__title">Consultoria Contábil</h2>
+                <p class="service-detail__description">
+                    Acompanhamento estratégico para tomada de decisões financeiras. 
+                    Oferecemos insights valiosos sobre a saúde financeira do seu negócio.
+                </p>
+                <ul class="service-detail__list">
+                    <li><i class="fas fa-check"></i> Análise de indicadores financeiros</li>
+                    <li><i class="fas fa-check"></i> Consultoria estratégica</li>
+                    <li><i class="fas fa-check"></i> Apoio na tomada de decisões</li>
+                    <li><i class="fas fa-check"></i> Reuniões periódicas</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta section section--primary">
+    <div class="cta__container container">
+        <div class="cta__content">
+            <h2 class="cta__title">Interessado em nossos serviços?</h2>
+            <p class="cta__description">
+                Entre em contato e descubra como podemos ajudar seu negócio
+            </p>
+        </div>
+        <div class="cta__buttons">
+            <a href="{{ url_for('main.contato') }}" class="button button--white">
+                <i class="fas fa-envelope"></i>
+                Entrar em Contato
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

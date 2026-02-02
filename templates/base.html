@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="{{ current_theme }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}GS Contabilidade - Contabilidade inteligente para quem quer crescer com segurança{% endblock %}">
+    <title>{% block title %}GS Contabilidade - Contabilidade Especializada{% endblock %}</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/themes.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hero-modern.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="{{ url_for('main.index') }}" class="nav__logo">
+                <img src="{{ url_for('static', filename='images/logo-branca.png') }}" 
+                     alt="GS Contabilidade" 
+                     class="logo-image"
+                     style="height: 50px; width: auto;">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{{ url_for('main.index') }}" class="nav__link {% if request.endpoint == 'main.index' %}active{% endif %}">
+                            Início
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ url_for('main.servicos') }}" class="nav__link {% if request.endpoint == 'main.servicos' %}active{% endif %}">
+                            Serviços
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ url_for('main.sobre') }}" class="nav__link {% if request.endpoint == 'main.sobre' %}active{% endif %}">
+                            Sobre Nós
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ url_for('main.diferenciais') }}" class="nav__link {% if request.endpoint == 'main.diferenciais' %}active{% endif %}">
+                            Diferenciais
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ url_for('main.depoimentos') }}" class="nav__link {% if request.endpoint == 'main.depoimentos' %}active{% endif %}">
+                            Depoimentos
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ url_for('main.contato') }}" class="nav__link {% if request.endpoint == 'main.contato' %}active{% endif %}">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages container">
+                    {% for category, message in messages %}
+                        <div class="alert alert--{{ category }}">
+                            <i class="fas fa-{% if category == 'success' %}check-circle{% elif category == 'error' %}exclamation-circle{% else %}info-circle{% endif %}"></i>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <div class="footer__group">
+                    <a href="{{ url_for('main.index') }}" class="footer__logo">
+                        <img src="{{ url_for('static', filename='images/logo-branca.png') }}" 
+                             alt="GS Contabilidade" 
+                             class="logo-image"
+                             style="height: 40px; width: auto; filter: brightness(0) invert(1);">
+                    </a>
+                    <p class="footer__description">
+                        Contabilidade inteligente para quem quer crescer com segurança. 
+                        Soluções modernas e atendimento personalizado para o seu negócio.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__group">
+                    <h3 class="footer__title">Links Rápidos</h3>
+                    <ul class="footer__links">
+                        <li><a href="{{ url_for('main.index') }}" class="footer__link">Início</a></li>
+                        <li><a href="{{ url_for('main.servicos') }}" class="footer__link">Serviços</a></li>
+                        <li><a href="{{ url_for('main.sobre') }}" class="footer__link">Sobre</a></li>
+                        <li><a href="{{ url_for('main.contato') }}" class="footer__link">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__group">
+                    <h3 class="footer__title">Serviços</h3>
+                    <ul class="footer__links">
+                        <li><a href="{{ url_for('main.servicos') }}" class="footer__link">Contabilidade Completa</a></li>
+                        <li><a href="{{ url_for('main.servicos') }}" class="footer__link">Abertura de Empresa</a></li>
+                        <li><a href="{{ url_for('main.servicos') }}" class="footer__link">Planejamento Tributário</a></li>
+                        <li><a href="{{ url_for('main.servicos') }}" class="footer__link">Consultoria Contábil</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__group">
+                    <h3 class="footer__title">Contato</h3>
+                    <ul class="footer__info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Avenida Central, 1234 – Sala 05<br>Centro – São Paulo/SP</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(11) 98888-7777</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contato@gscontabilidade.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copy">
+                    © 2026 GS Contabilidade – Todos os direitos reservados
+                </p>
+                <p class="footer__cnpj">
+                    CNPJ: 12.345.678/0001-99
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5511988887777" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="{{ url_for('static', filename='js/theme-switcher.js') }}"></script>
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

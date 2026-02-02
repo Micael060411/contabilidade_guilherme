@@ -1,0 +1,238 @@
+/*
+  SISTEMA DE THEMES - GS Contabilidade
+  Escolha seu theme favorito!
+*/
+
+/* ==================== THEME 1: AZUL MODERNO (DEFAULT) ==================== */
+[data-theme="azul-moderno"],
+:root {
+  /* Cores Principais */
+  --primary-color: #0066cc;
+  --primary-dark: #004d99;
+  --primary-light: #3385d6;
+  
+  --secondary-color: #00c896;
+  --secondary-dark: #00a077;
+  
+  --accent-color: #ffd700;
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #0066cc 0%, #3385d6 100%);
+  --gradient-secondary: linear-gradient(135deg, #00c896 0%, #00a077 100%);
+  --gradient-hero: linear-gradient(135deg, #0066cc 0%, #00c896 100%);
+  
+  /* Logo */
+  --logo-color: 'dourada'; /* dourada, branca, preta */
+}
+
+/* ==================== THEME 2: AZUL ELEGANTE ==================== */
+[data-theme="azul-elegante"] {
+  --primary-color: #1e3a8a;
+  --primary-dark: #1e293b;
+  --primary-light: #3b82f6;
+  
+  --secondary-color: #10b981;
+  --secondary-dark: #059669;
+  
+  --accent-color: #f59e0b;
+  
+  --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  --gradient-secondary: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --gradient-hero: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
+  
+  --logo-color: 'dourada';
+}
+
+/* ==================== THEME 3: DOURADO PREMIUM ==================== */
+[data-theme="dourado-premium"] {
+  --primary-color: #d4af37;
+  --primary-dark: #b8941e;
+  --primary-light: #e6c966;
+  
+  --secondary-color: #1a1a2e;
+  --secondary-dark: #0f0f1e;
+  
+  --accent-color: #ff6b6b;
+  
+  --gradient-primary: linear-gradient(135deg, #d4af37 0%, #e6c966 100%);
+  --gradient-secondary: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+  --gradient-hero: linear-gradient(135deg, #1a1a2e 0%, #d4af37 100%);
+  
+  --logo-color: 'dourada';
+}
+
+/* ==================== THEME 4: VERDE PROFISSIONAL ==================== */
+[data-theme="verde-profissional"] {
+  --primary-color: #059669;
+  --primary-dark: #047857;
+  --primary-light: #10b981;
+  
+  --secondary-color: #0891b2;
+  --secondary-dark: #0e7490;
+  
+  --accent-color: #f59e0b;
+  
+  --gradient-primary: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  --gradient-secondary: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+  --gradient-hero: linear-gradient(135deg, #059669 0%, #0891b2 100%);
+  
+  --logo-color: 'branca';
+}
+
+/* ==================== THEME 5: ESCURO MODERNO ==================== */
+[data-theme="escuro-moderno"] {
+  --primary-color: #60a5fa;
+  --primary-dark: #3b82f6;
+  --primary-light: #93c5fd;
+  
+  --secondary-color: #34d399;
+  --secondary-dark: #10b981;
+  
+  --accent-color: #fbbf24;
+  
+  /* Cores base escuras */
+  --white: #f9fafb;
+  --gray-50: #1f2937;
+  --gray-100: #111827;
+  --gray-800: #e5e7eb;
+  --gray-900: #f3f4f6;
+  
+  --gradient-primary: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
+  --gradient-secondary: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  --gradient-hero: linear-gradient(135deg, #1f2937 0%, #60a5fa 100%);
+  
+  --logo-color: 'branca';
+}
+
+/* ==================== THEME 6: ROXO CORPORATIVO ==================== */
+[data-theme="roxo-corporativo"] {
+  --primary-color: #7c3aed;
+  --primary-dark: #6d28d9;
+  --primary-light: #a78bfa;
+  
+  --secondary-color: #ec4899;
+  --secondary-dark: #db2777;
+  
+  --accent-color: #f59e0b;
+  
+  --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+  --gradient-secondary: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  --gradient-hero: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+  
+  --logo-color: 'branca';
+}
+
+/* ==================== THEME 7: LARANJA CRIATIVO ==================== */
+[data-theme="laranja-criativo"] {
+  --primary-color: #ea580c;
+  --primary-dark: #c2410c;
+  --primary-light: #f97316;
+  
+  --secondary-color: #0891b2;
+  --secondary-dark: #0e7490;
+  
+  --accent-color: #fbbf24;
+  
+  --gradient-primary: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  --gradient-secondary: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+  --gradient-hero: linear-gradient(135deg, #ea580c 0%, #0891b2 100%);
+  
+  --logo-color: 'branca';
+}
+
+/* ==================== THEME 8: CINZA MINIMALISTA ==================== */
+[data-theme="cinza-minimalista"] {
+  --primary-color: #374151;
+  --primary-dark: #1f2937;
+  --primary-light: #6b7280;
+  
+  --secondary-color: #0891b2;
+  --secondary-dark: #0e7490;
+  
+  --accent-color: #f59e0b;
+  
+  --gradient-primary: linear-gradient(135deg, #374151 0%, #6b7280 100%);
+  --gradient-secondary: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+  --gradient-hero: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  
+  --logo-color: 'dourada';
+}
+
+/* ==================== THEME 9: VERMELHO ENERGIA ==================== */
+[data-theme="vermelho-energia"] {
+  --primary-color: #dc2626;
+  --primary-dark: #991b1b;
+  --primary-light: #ef4444;
+  
+  --secondary-color: #0891b2;
+  --secondary-dark: #0e7490;
+  
+  --accent-color: #fbbf24;
+  
+  --gradient-primary: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  --gradient-secondary: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+  --gradient-hero: linear-gradient(135deg, #dc2626 0%, #0891b2 100%);
+  
+  --logo-color: 'branca';
+}
+
+/* ==================== THEME 10: TURQUESA REFRESCANTE ==================== */
+[data-theme="turquesa-refrescante"] {
+  --primary-color: #06b6d4;
+  --primary-dark: #0891b2;
+  --primary-light: #22d3ee;
+  
+  --secondary-color: #10b981;
+  --secondary-dark: #059669;
+  
+  --accent-color: #f59e0b;
+  
+  --gradient-primary: linear-gradient(135deg, #06b6d4 0%, #22d3ee 100%);
+  --gradient-secondary: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --gradient-hero: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
+  
+  --logo-color: 'branca';
+}
+
+/* ==================== APLICAÇÃO DOS GRADIENTES ==================== */
+.text-gradient,
+.hero__stat-number,
+.section__subtitle {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__image-wrapper,
+.about__image-wrapper,
+.about-preview__image-wrapper {
+  background: var(--gradient-hero);
+}
+
+.service-card__icon,
+.differential-card__icon,
+.value-card__icon,
+.mission__icon,
+.business-hours__icon,
+.contact__detail-icon {
+  background: var(--gradient-primary);
+}
+
+.section--primary {
+  background: var(--gradient-primary);
+}
+
+/* ==================== TRANSIÇÃO SUAVE DE THEME ==================== */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Exceções - elementos que não devem ter transição lenta */
+.button,
+.nav__link,
+a,
+.service-card,
+.testimonial-card {
+  transition: all 0.15s ease !important;
+}

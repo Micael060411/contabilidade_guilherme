@@ -1,0 +1,843 @@
+/**
+ * HERO MODERN CAROUSEL
+ * Carrossel ultra-moderno com efeitos visuais 2026
+ */
+
+/* ==================== BASE ==================== */
+.hero-modern {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  overflow: hidden;
+  margin-top: -80px;
+  margin-bottom: 10px;
+}
+
+.hero-modern__carousel {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+}
+
+.hero-modern__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  transform: translateX(100%);
+  box-sizing: border-box;
+}
+
+.hero-modern__slide--active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  position: absolute;
+  transform: translateX(0);
+}
+
+.hero-modern__slide--prev {
+  transform: translateX(-100%);
+}
+
+/* ==================== BACKGROUNDS ==================== */
+.hero-modern__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-modern__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.hero-modern__gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(0, 102, 204, 0.95) 0%, 
+    rgba(0, 200, 150, 0.85) 100%);
+  z-index: 1;
+}
+
+.hero-modern__gradient--strong {
+  background: linear-gradient(135deg, 
+    rgba(0, 102, 204, 0.98) 0%, 
+    rgba(0, 200, 150, 0.95) 50%,
+    rgba(0, 102, 204, 0.98) 100%);
+}
+
+.hero-modern__gradient--reverse {
+  background: linear-gradient(135deg, 
+    rgba(0, 200, 150, 0.95) 0%, 
+    rgba(0, 102, 204, 0.95) 100%);
+}
+
+.hero-modern__pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+    repeating-linear-gradient(45deg, transparent, transparent 100px, rgba(255, 255, 255, 0.02) 100px, rgba(255, 255, 255, 0.02) 200px);
+  z-index: 2;
+  animation: patternMove 20s linear infinite;
+}
+
+.hero-modern__pattern--alt {
+  animation: patternMove 15s linear infinite reverse;
+}
+
+@keyframes patternMove {
+  0% { transform: translateX(0) translateY(0); }
+  100% { transform: translateX(-100px) translateY(-100px); }
+}
+
+/* ==================== CONTENT ==================== */
+.hero-modern__content {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 60px 120px 80px;
+  min-height: auto;
+  width: 100%;
+}
+
+.hero-modern__text {
+  animation: slideInLeft 0.8s ease-out;
+  transition: opacity 0.5s ease;
+}
+
+.hero-modern__slide--active .hero-modern__text {
+  animation: slideInLeft 0.8s ease-out;
+  opacity: 1;
+}
+
+.hero-modern__slide:not(.hero-modern__slide--active) .hero-modern__text {
+  opacity: 0;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ==================== BRAND ==================== */
+.hero-modern__brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.5s ease-out 0.2s both;
+}
+
+.brand-letters {
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffd700 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.05em;
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.brand-text {
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 700;
+}
+
+/* ==================== TITLE & DESC ==================== */
+.hero-modern__title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.5s ease-out 0.4s both;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-modern__title .highlight {
+  background: linear-gradient(135deg, #ffd700 0%, #00c896 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.hero-modern__desc {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  animation: fadeIn 0.5s ease-out 0.6s both;
+  max-width: 600px;
+}
+
+/* ==================== ACTIONS ==================== */
+.hero-modern__actions {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  animation: fadeIn 0.5s ease-out 0.8s both;
+}
+
+.btn-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-modern::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-modern:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-modern--primary {
+  background: linear-gradient(135deg, #ffd700 0%, #f0b000 100%);
+  color: #1a1a1a;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+}
+
+.btn-modern--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
+}
+
+.btn-modern--whatsapp {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: white;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+}
+
+.btn-modern--whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+}
+
+.btn-modern--outline {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.btn-modern--outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-3px);
+}
+
+.btn-modern i {
+  font-size: 1.3rem;
+  z-index: 1;
+}
+
+.btn-modern span {
+  z-index: 1;
+}
+
+/* ==================== STATS ==================== */
+.hero-modern__stats {
+  display: flex;
+  gap: 3rem;
+  animation: fadeIn 0.5s ease-out 1s both;
+}
+
+.stat-modern {
+  text-align: left;
+}
+
+.stat-modern__number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.stat-modern__label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ==================== VISUAL CARDS ==================== */
+.hero-modern__visual {
+  position: relative;
+  height: 500px;
+  animation: fadeIn 0.8s ease-out 1s both;
+}
+
+.visual-card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: float 6s ease-in-out infinite;
+}
+
+.visual-card i {
+  font-size: 4rem;
+  color: #ffd700;
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5));
+}
+
+.visual-card--1 {
+  top: 10%;
+  left: 10%;
+  width: 180px;
+  height: 180px;
+  animation-delay: 0s;
+}
+
+.visual-card--2 {
+  top: 45%;
+  right: 15%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 1s;
+}
+
+.visual-card--3 {
+  bottom: 15%;
+  left: 20%;
+  width: 140px;
+  height: 140px;
+  animation-delay: 2s;
+}
+
+.visual-card__pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 215, 0, 0.3);
+  animation: pulse 2s ease-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* ==================== SAVINGS CARD ==================== */
+.savings-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 30px;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  animation: float 5s ease-in-out infinite;
+}
+
+.savings-card__icon {
+  font-size: 5rem;
+  color: #ffd700;
+  filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.6));
+}
+
+.savings-card__label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.savings-card__value {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffd700;
+  text-shadow: 0 2px 20px rgba(255, 215, 0, 0.5);
+}
+
+/* ==================== HIGHLIGHT BOXES ==================== */
+.hero-modern__highlight {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  animation: fadeIn 0.5s ease-out 1s both;
+}
+
+.highlight-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+}
+
+.highlight-box i {
+  font-size: 1.5rem;
+  color: #ffd700;
+}
+
+/* ==================== NAVIGATION ==================== */
+.hero-modern__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.hero-modern__nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.hero-modern__nav--prev {
+  left: 40px;
+}
+
+.hero-modern__nav--next {
+  right: 40px;
+}
+
+/* ==================== INDICATORS ==================== */
+.hero-modern__indicators {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.hero-modern__indicator {
+  width: 60px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.hero-modern__indicator:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.hero-modern__indicator-line {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.hero-modern__indicator--active .hero-modern__indicator-line {
+  width: 100%;
+  animation: progressBar 5s linear;
+}
+
+@keyframes progressBar {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .hero-modern {
+    min-height: auto;
+    margin-top: -60px;
+  }
+  
+  .hero-modern__carousel {
+    min-height: auto;
+    position: relative;
+  }
+  
+  .hero-modern__slide {
+    min-height: auto;
+    padding: 60px 0;
+  }
+  
+  .hero-modern__content {
+    grid-template-columns: 1fr;
+    padding: 50px 80px 70px;
+    gap: 2rem;
+  }
+  
+  .hero-modern__visual {
+    display: none;
+  }
+  
+  .hero-modern__title {
+    font-size: 3rem;
+  }
+  
+  .brand-letters {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-modern {
+    min-height: auto;
+    margin-top: -60px;
+    position: relative;
+  }
+  
+  .hero-modern__carousel {
+    min-height: auto;
+    position: relative;
+  }
+  
+  .hero-modern__slide {
+    min-height: auto;
+    padding: 40px 0;
+  }
+  
+  .hero-modern__gradient {
+    background: linear-gradient(135deg, 
+      rgba(0, 102, 204, 0.98) 0%, 
+      rgba(0, 200, 150, 0.95) 100%) !important;
+    z-index: 1;
+  }
+  
+  .hero-modern__gradient--strong {
+    background: linear-gradient(135deg, 
+      rgba(0, 102, 204, 0.98) 0%, 
+      rgba(0, 200, 150, 0.98) 50%,
+      rgba(0, 102, 204, 0.98) 100%) !important;
+  }
+  
+  .hero-modern__pattern {
+    z-index: 2;
+    opacity: 0.5;
+  }
+  
+  .hero-modern__content {
+    padding: 40px 60px 60px;
+    z-index: 10;
+    gap: 1.5rem;
+  }
+  
+  .hero-modern__text {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .hero-modern__brand {
+    margin-bottom: 1rem;
+  }
+  
+  .brand-letters {
+    font-size: 1.8rem;
+    color: #ffd700 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #ffd700 !important;
+    background-clip: unset !important;
+    text-shadow: 0 2px 10px rgba(255, 215, 0, 0.5);
+  }
+  
+  .brand-text {
+    font-size: 1.1rem;
+    color: #ffffff !important;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-modern__title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-modern__title .highlight {
+    display: inline;
+    color: #ffd700 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #ffd700 !important;
+    background-clip: unset !important;
+    text-shadow: 0 2px 10px rgba(255, 215, 0, 0.5);
+  }
+  
+  .hero-modern__desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-modern__actions {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-modern {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.85rem;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hero-modern__stats {
+    gap: 1rem;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .stat-modern {
+    text-align: center;
+    flex: 1;
+    min-width: 70px;
+  }
+  
+  .stat-modern__number {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .stat-modern__label {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .hero-modern__highlight {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+  
+  .highlight-box {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.85rem;
+    justify-content: center;
+  }
+  
+  .highlight-box i {
+    font-size: 1.2rem;
+  }
+  
+  .hero-modern__nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 200;
+  }
+  
+  .hero-modern__nav--prev {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .hero-modern__nav--next {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .hero-modern__nav:hover {
+    transform: translateY(-50%) scale(1.05);
+  }
+  
+  .hero-modern__indicators {
+    bottom: 15px;
+  }
+  
+  .hero-modern__indicator {
+    width: 30px;
+    height: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-modern {
+    margin-top: -50px;
+  }
+  
+  .hero-modern__content {
+    padding: 30px 50px 50px;
+  }
+  
+  .brand-letters {
+    font-size: 1.5rem;
+  }
+  
+  .brand-text {
+    font-size: 1rem;
+  }
+  
+  .hero-modern__title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-modern__desc {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .hero-modern__actions {
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .btn-modern {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.8rem;
+  }
+  
+  .hero-modern__stats {
+    padding: 1rem;
+    border-radius: 12px;
+    gap: 0.8rem;
+  }
+  
+  .stat-modern__number {
+    font-size: 1.3rem;
+  }
+  
+  .stat-modern__label {
+    font-size: 0.6rem;
+  }
+  
+  .hero-modern__highlight {
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+  }
+  
+  .highlight-box {
+    padding: 0.7rem 1rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+  
+  .highlight-box i {
+    font-size: 1rem;
+  }
+  
+  .hero-modern__nav {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  
+  .hero-modern__nav--prev {
+    left: 8px;
+  }
+  
+  .hero-modern__nav--next {
+    right: 8px;
+  }
+  
+  .hero-modern__indicator {
+    width: 20px;
+  }
+}

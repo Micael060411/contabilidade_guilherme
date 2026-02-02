@@ -1,0 +1,424 @@
+{% extends "base.html" %}
+
+{% block title %}GS Contabilidade - Contabilidade inteligente para crescer com segurança{% endblock %}
+
+{% block content %}
+<!-- Hero Carousel -->
+<section class="hero-modern">
+    <div class="hero-modern__carousel">
+        <!-- Slide 1 -->
+        <div class="hero-modern__slide hero-modern__slide--active" data-slide="1">
+            <div class="hero-modern__bg">
+                <div class="hero-modern__gradient"></div>
+                <div class="hero-modern__pattern"></div>
+            </div>
+            <div class="hero-modern__content container">
+                <div class="hero-modern__text" data-aos="fade-up">
+                    <div class="hero-modern__brand">
+                        <span class="brand-letters">GS</span>
+                        <span class="brand-text">Contabilidade</span>
+                    </div>
+                    <h1 class="hero-modern__title">
+                        Contabilidade<br>
+                        <span class="highlight">moderna e inteligente</span><br>
+                        para seu negócio
+                    </h1>
+                    <p class="hero-modern__desc">
+                        Tecnologia, expertise e atendimento personalizado para empresas que querem crescer com segurança.
+                    </p>
+                    <div class="hero-modern__actions">
+                        <a href="{{ url_for('main.contato') }}" class="btn-modern btn-modern--primary">
+                            <i class="fas fa-rocket"></i>
+                            <span>Começar Agora</span>
+                        </a>
+                        <a href="https://wa.me/5511988887777" class="btn-modern btn-modern--whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Falar com Especialista</span>
+                        </a>
+                    </div>
+                    <div class="hero-modern__stats">
+                        <div class="stat-modern">
+                            <div class="stat-modern__number">+10</div>
+                            <div class="stat-modern__label">Anos no Mercado</div>
+                        </div>
+                        <div class="stat-modern">
+                            <div class="stat-modern__number">500+</div>
+                            <div class="stat-modern__label">Empresas Atendidas</div>
+                        </div>
+                        <div class="stat-modern">
+                            <div class="stat-modern__number">98%</div>
+                            <div class="stat-modern__label">Satisfação</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-modern__visual" data-aos="fade-left">
+                    <div class="visual-card visual-card--1">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="visual-card__pulse"></div>
+                    </div>
+                    <div class="visual-card visual-card--2">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="visual-card visual-card--3">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-modern__slide" data-slide="2">
+            <div class="hero-modern__bg hero-modern__bg--dark">
+                <img src="{{ url_for('static', filename='images/equipe.webp') }}" alt="Equipe GS" class="hero-modern__img">
+                <div class="hero-modern__gradient hero-modern__gradient--strong"></div>
+            </div>
+            <div class="hero-modern__content container">
+                <div class="hero-modern__text" data-aos="fade-up">
+                    <div class="hero-modern__brand">
+                        <span class="brand-letters">GS</span>
+                        <span class="brand-text">Contabilidade</span>
+                    </div>
+                    <h1 class="hero-modern__title">
+                        Uma equipe<br>
+                        <span class="highlight">dedicada ao seu sucesso</span>
+                    </h1>
+                    <p class="hero-modern__desc">
+                        Profissionais experientes prontos para entender seu negócio e oferecer soluções personalizadas.
+                    </p>
+                    <div class="hero-modern__actions">
+                        <a href="{{ url_for('main.sobre') }}" class="btn-modern btn-modern--primary">
+                            <i class="fas fa-users"></i>
+                            <span>Conheça a Equipe</span>
+                        </a>
+                        <a href="{{ url_for('main.servicos') }}" class="btn-modern btn-modern--outline">
+                            <i class="fas fa-th-large"></i>
+                            <span>Nossos Serviços</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-modern__slide" data-slide="3">
+            <div class="hero-modern__bg">
+                <div class="hero-modern__gradient hero-modern__gradient--reverse"></div>
+                <div class="hero-modern__pattern hero-modern__pattern--alt"></div>
+            </div>
+            <div class="hero-modern__content container">
+                <div class="hero-modern__text" data-aos="fade-up">
+                    <div class="hero-modern__brand">
+                        <span class="brand-letters">GS</span>
+                        <span class="brand-text">Contabilidade</span>
+                    </div>
+                    <h1 class="hero-modern__title">
+                        Economia tributária<br>
+                        <span class="highlight">de até 40%</span> nos impostos
+                    </h1>
+                    <p class="hero-modern__desc">
+                        Planejamento tributário estratégico que identifica oportunidades legais de redução de custos.
+                    </p>
+                    <div class="hero-modern__actions">
+                        <a href="{{ url_for('main.contato') }}" class="btn-modern btn-modern--primary">
+                            <i class="fas fa-calculator"></i>
+                            <span>Análise Gratuita</span>
+                        </a>
+                        <a href="{{ url_for('main.diferenciais') }}" class="btn-modern btn-modern--outline">
+                            <i class="fas fa-star"></i>
+                            <span>Nossos Diferenciais</span>
+                        </a>
+                    </div>
+                    <div class="hero-modern__highlight">
+                        <div class="highlight-box">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% Legal e Seguro</span>
+                        </div>
+                        <div class="highlight-box">
+                            <i class="fas fa-clock"></i>
+                            <span>Resultados em 30 dias</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-modern__visual" data-aos="zoom-in">
+                    <div class="savings-card">
+                        <div class="savings-card__icon">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <div class="savings-card__text">
+                            <div class="savings-card__label">Economia Média</div>
+                            <div class="savings-card__value">R$ 50mil/ano</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles -->
+        <button class="hero-modern__nav hero-modern__nav--prev" aria-label="Anterior">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="hero-modern__nav hero-modern__nav--next" aria-label="Próximo">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Indicadores -->
+        <div class="hero-modern__indicators">
+            <button class="hero-modern__indicator hero-modern__indicator--active" data-slide="0">
+                <span class="hero-modern__indicator-line"></span>
+            </button>
+            <button class="hero-modern__indicator" data-slide="1">
+                <span class="hero-modern__indicator-line"></span>
+            </button>
+            <button class="hero-modern__indicator" data-slide="2">
+                <span class="hero-modern__indicator-line"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview Section -->
+<section class="services-preview section">
+    <div class="services-preview__container container">
+        <div class="section__header">
+            <span class="section__subtitle">O que fazemos</span>
+            <h2 class="section__title">Nossos Serviços</h2>
+            <p class="section__description">
+                Soluções contábeis completas para o seu negócio
+            </p>
+        </div>
+
+        <div class="services-preview__grid">
+            <div class="service-card">
+                <div class="service-card__icon">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <h3 class="service-card__title">Contabilidade Completa</h3>
+                <p class="service-card__description">
+                    Gestão contábil, fiscal e tributária com total transparência e segurança.
+                </p>
+                <a href="{{ url_for('main.servicos') }}" class="service-card__link">
+                    Saiba mais <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card__icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3 class="service-card__title">Abertura de Empresa</h3>
+                <p class="service-card__description">
+                    Abertura de CNPJ rápida e sem burocracia, do MEI ao Simples Nacional.
+                </p>
+                <a href="{{ url_for('main.servicos') }}" class="service-card__link">
+                    Saiba mais <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card__icon">
+                    <i class="fas fa-percentage"></i>
+                </div>
+                <h3 class="service-card__title">Planejamento Tributário</h3>
+                <p class="service-card__description">
+                    Redução legal de impostos com enquadramento correto da sua empresa.
+                </p>
+                <a href="{{ url_for('main.servicos') }}" class="service-card__link">
+                    Saiba mais <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card__icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="service-card__title">Folha de Pagamento</h3>
+                <p class="service-card__description">
+                    Gestão de funcionários, pró-labore e encargos trabalhistas.
+                </p>
+                <a href="{{ url_for('main.servicos') }}" class="service-card__link">
+                    Saiba mais <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card__icon">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <h3 class="service-card__title">Consultoria Contábil</h3>
+                <p class="service-card__description">
+                    Acompanhamento estratégico para tomada de decisões financeiras.
+                </p>
+                <a href="{{ url_for('main.servicos') }}" class="service-card__link">
+                    Saiba mais <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card__icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="service-card__title">Atendimento Digital</h3>
+                <p class="service-card__description">
+                    Suporte completo via WhatsApp, com atendimento rápido e humanizado.
+                </p>
+                <a href="{{ url_for('main.servicos') }}" class="service-card__link">
+                    Saiba mais <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="services-preview__cta">
+            <a href="{{ url_for('main.servicos') }}" class="button button--primary">
+                Ver todos os serviços
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="about-preview section section--gray">
+    <div class="about-preview__container container">
+        <div class="about-preview__content">
+            <span class="section__subtitle">Quem somos</span>
+            <h2 class="section__title">Por que escolher a GS Contabilidade?</h2>
+            <p class="about-preview__text">
+                A GS Contabilidade é um escritório especializado em soluções contábeis modernas, 
+                focado em pequenas e médias empresas. Atuamos com tecnologia, atendimento humanizado 
+                e total compromisso com a regularidade fiscal dos nossos clientes.
+            </p>
+            <ul class="about-preview__list">
+                <li class="about-preview__item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Atendimento personalizado e humanizado</span>
+                </li>
+                <li class="about-preview__item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Uso de tecnologia e automação</span>
+                </li>
+                <li class="about-preview__item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Linguagem simples e sem "contabilês"</span>
+                </li>
+                <li class="about-preview__item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Suporte rápido via WhatsApp</span>
+                </li>
+            </ul>
+            <a href="{{ url_for('main.sobre') }}" class="button button--primary">
+                Saiba mais sobre nós
+            </a>
+        </div>
+        <div class="about-preview__image">
+            <div class="about-preview__image-wrapper">
+                <i class="fas fa-handshake"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Preview Section -->
+<section class="testimonials-preview section">
+    <div class="testimonials-preview__container container">
+        <div class="section__header">
+            <span class="section__subtitle">Depoimentos</span>
+            <h2 class="section__title">O que nossos clientes dizem</h2>
+        </div>
+
+        <div class="testimonials-preview__grid">
+            <div class="testimonial-card">
+                <div class="testimonial-card__stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-card__text">
+                    "Depois que comecei com a GS Contabilidade, nunca mais tive dor de cabeça com impostos."
+                </p>
+                <div class="testimonial-card__author">
+                    <div class="testimonial-card__avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-card__info">
+                        <h4 class="testimonial-card__name">Carlos Mendes</h4>
+                        <p class="testimonial-card__role">Empresário</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-card__stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-card__text">
+                    "Atendimento rápido, explicam tudo de forma simples. Recomendo demais."
+                </p>
+                <div class="testimonial-card__author">
+                    <div class="testimonial-card__avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-card__info">
+                        <h4 class="testimonial-card__name">Fernanda Oliveira</h4>
+                        <p class="testimonial-card__role">Prestadora de Serviços</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-card__stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-card__text">
+                    "Abriram minha empresa em poucos dias e cuidam de tudo mensalmente."
+                </p>
+                <div class="testimonial-card__author">
+                    <div class="testimonial-card__avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-card__info">
+                        <h4 class="testimonial-card__name">João Ribeiro</h4>
+                        <p class="testimonial-card__role">Autônomo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonials-preview__cta">
+            <a href="{{ url_for('main.depoimentos') }}" class="button button--secondary">
+                Ver mais depoimentos
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta section section--primary">
+    <div class="cta__container container">
+        <div class="cta__content">
+            <h2 class="cta__title">Pronto para transformar a contabilidade do seu negócio?</h2>
+            <p class="cta__description">
+                Entre em contato agora e agende uma consultoria gratuita com nossos especialistas
+            </p>
+        </div>
+        <div class="cta__buttons">
+            <a href="{{ url_for('main.contato') }}" class="button button--white">
+                <i class="fas fa-envelope"></i>
+                Entrar em Contato
+            </a>
+            <a href="https://wa.me/5511988887777" target="_blank" class="button button--outline-white">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
