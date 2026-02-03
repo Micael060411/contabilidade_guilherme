@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  contabilidade_guilherme:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gs_contabilidade
+    restart: unless-stopped
+    ports:
+      - "3005:3005"
+    environment:
+      - FLASK_ENV=production
+      - SECRET_KEY=${SECRET_KEY:-change-this-secret-key-in-production}
+    volumes:
+      - ./uploads:/app/uploads
+      - ./arquivos:/app/arquivos
+      - ./imagens:/app/imagens
+      - ./logo:/app/logo
+    networks:
+      - contabilidade_network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  contabilidade_network:
+    driver: bridge
