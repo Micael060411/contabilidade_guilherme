@@ -17,6 +17,8 @@ services:
       - ./arquivos:/app/arquivos
       - ./imagens:/app/imagens
       - ./logo:/app/logo
+      - ./templates:/app/templates
+      - ./static:/app/static
     networks:
       - contabilidade_network
     logging:
