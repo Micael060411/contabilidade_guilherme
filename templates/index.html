@@ -3,175 +3,34 @@
 {% block title %}GS Contabilidade - Contabilidade inteligente para crescer com segurança{% endblock %}
 
 {% block content %}
-<!-- Hero Carousel -->
-<section class="hero-modern">
-    <div class="hero-modern__carousel">
-        <!-- Slide 1 -->
-        <div class="hero-modern__slide hero-modern__slide--active" data-slide="1">
-            <div class="hero-modern__bg">
-                <div class="hero-modern__gradient"></div>
-                <div class="hero-modern__pattern"></div>
+<!-- Hero Section -->
+<section class="hero-simple">
+    <div class="hero-simple__background">
+        <div class="hero-simple__overlay"></div>
+    </div>
+    <div class="hero-simple__container container">
+        <div class="hero-simple__content">
+            <div class="hero-simple__brand">
+                <span class="hero-simple__brand-name">
+                    <span class="brand-accent">GS</span> Contabilidade
+                </span>
             </div>
-            <div class="hero-modern__content container">
-                <div class="hero-modern__text" data-aos="fade-up">
-                    <div class="hero-modern__brand">
-                        <span class="brand-letters">GS</span>
-                        <span class="brand-text">Contabilidade</span>
-                    </div>
-                    <h1 class="hero-modern__title">
-                        Contabilidade<br>
-                        <span class="highlight">moderna e inteligente</span><br>
-                        para seu negócio
-                    </h1>
-                    <p class="hero-modern__desc">
-                        Tecnologia, expertise e atendimento personalizado para empresas que querem crescer com segurança.
-                    </p>
-                    <div class="hero-modern__actions">
-                        <a href="{{ url_for('main.contato') }}" class="btn-modern btn-modern--primary">
-                            <i class="fas fa-rocket"></i>
-                            <span>Começar Agora</span>
-                        </a>
-                        <a href="https://wa.me/5543991039853" class="btn-modern btn-modern--whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>Falar com Especialista</span>
-                        </a>
-                    </div>
-                    <div class="hero-modern__stats">
-                        <div class="stat-modern">
-                            <div class="stat-modern__number">+10</div>
-                            <div class="stat-modern__label">Anos no Mercado</div>
-                        </div>
-                        <div class="stat-modern">
-                            <div class="stat-modern__number">500+</div>
-                            <div class="stat-modern__label">Empresas Atendidas</div>
-                        </div>
-                        <div class="stat-modern">
-                            <div class="stat-modern__number">98%</div>
-                            <div class="stat-modern__label">Satisfação</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-modern__visual" data-aos="fade-left">
-                    <div class="visual-card visual-card--1">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="visual-card__pulse"></div>
-                    </div>
-                    <div class="visual-card visual-card--2">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="visual-card visual-card--3">
-                        <i class="fas fa-coins"></i>
-                    </div>
-                </div>
+            <h1 class="hero-simple__title">
+                Contabilidade <span class="text-highlight">estratégica</span> para empresas que querem crescer com segurança
+            </h1>
+            <p class="hero-simple__subtitle">
+                Reduza impostos, organize sua empresa e tenha apoio completo de um time especializado.
+            </p>
+            <div class="hero-simple__actions">
+                <a href="https://wa.me/5543991039853" class="btn-hero btn-hero--whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Falar com Especialista</span>
+                </a>
+                <a href="{{ url_for('main.contato') }}" class="btn-hero btn-hero--outline">
+                    <i class="fas fa-envelope"></i>
+                    <span>Enviar Mensagem</span>
+                </a>
             </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="hero-modern__slide" data-slide="2">
-            <div class="hero-modern__bg hero-modern__bg--dark">
-                <img src="{{ url_for('static', filename='images/equipe.webp') }}" alt="Equipe GS" class="hero-modern__img">
-                <div class="hero-modern__gradient hero-modern__gradient--strong"></div>
-            </div>
-            <div class="hero-modern__content container">
-                <div class="hero-modern__text" data-aos="fade-up">
-                    <div class="hero-modern__brand">
-                        <span class="brand-letters">GS</span>
-                        <span class="brand-text">Contabilidade</span>
-                    </div>
-                    <h1 class="hero-modern__title">
-                        Uma equipe<br>
-                        <span class="highlight">dedicada ao seu sucesso</span>
-                    </h1>
-                    <p class="hero-modern__desc">
-                        Profissionais experientes prontos para entender seu negócio e oferecer soluções personalizadas.
-                    </p>
-                    <div class="hero-modern__actions">
-                        <a href="{{ url_for('main.sobre') }}" class="btn-modern btn-modern--primary">
-                            <i class="fas fa-users"></i>
-                            <span>Conheça a Equipe</span>
-                        </a>
-                        <a href="{{ url_for('main.servicos') }}" class="btn-modern btn-modern--outline">
-                            <i class="fas fa-th-large"></i>
-                            <span>Nossos Serviços</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="hero-modern__slide" data-slide="3">
-            <div class="hero-modern__bg">
-                <div class="hero-modern__gradient hero-modern__gradient--reverse"></div>
-                <div class="hero-modern__pattern hero-modern__pattern--alt"></div>
-            </div>
-            <div class="hero-modern__content container">
-                <div class="hero-modern__text" data-aos="fade-up">
-                    <div class="hero-modern__brand">
-                        <span class="brand-letters">GS</span>
-                        <span class="brand-text">Contabilidade</span>
-                    </div>
-                    <h1 class="hero-modern__title">
-                        Economia tributária<br>
-                        <span class="highlight">de até 40%</span> nos impostos
-                    </h1>
-                    <p class="hero-modern__desc">
-                        Planejamento tributário estratégico que identifica oportunidades legais de redução de custos.
-                    </p>
-                    <div class="hero-modern__actions">
-                        <a href="{{ url_for('main.contato') }}" class="btn-modern btn-modern--primary">
-                            <i class="fas fa-calculator"></i>
-                            <span>Análise Gratuita</span>
-                        </a>
-                        <a href="{{ url_for('main.diferenciais') }}" class="btn-modern btn-modern--outline">
-                            <i class="fas fa-star"></i>
-                            <span>Nossos Diferenciais</span>
-                        </a>
-                    </div>
-                    <div class="hero-modern__highlight">
-                        <div class="highlight-box">
-                            <i class="fas fa-check-circle"></i>
-                            <span>100% Legal e Seguro</span>
-                        </div>
-                        <div class="highlight-box">
-                            <i class="fas fa-clock"></i>
-                            <span>Resultados em 30 dias</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-modern__visual" data-aos="zoom-in">
-                    <div class="savings-card">
-                        <div class="savings-card__icon">
-                            <i class="fas fa-piggy-bank"></i>
-                        </div>
-                        <div class="savings-card__text">
-                            <div class="savings-card__label">Economia Média</div>
-                            <div class="savings-card__value">R$ 50mil/ano</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Controles -->
-        <button class="hero-modern__nav hero-modern__nav--prev" aria-label="Anterior">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="hero-modern__nav hero-modern__nav--next" aria-label="Próximo">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-
-        <!-- Indicadores -->
-        <div class="hero-modern__indicators">
-            <button class="hero-modern__indicator hero-modern__indicator--active" data-slide="0">
-                <span class="hero-modern__indicator-line"></span>
-            </button>
-            <button class="hero-modern__indicator" data-slide="1">
-                <span class="hero-modern__indicator-line"></span>
-            </button>
-            <button class="hero-modern__indicator" data-slide="2">
-                <span class="hero-modern__indicator-line"></span>
-            </button>
         </div>
     </div>
 </section>
