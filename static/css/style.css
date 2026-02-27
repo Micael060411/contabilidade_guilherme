@@ -2036,6 +2036,7 @@ select {
   }
 }
 
+@media print {
   .header,
   .nav,
   .whatsapp-float,
