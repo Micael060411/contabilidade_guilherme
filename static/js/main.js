@@ -56,12 +56,25 @@
     });
 
     // ==================== SCROLL HEADER ====================
+    
+    // Verifica se é página com hero-simple (home) ou página interna
+    const isHomePage = document.querySelector('.hero-simple');
+    
+    // Se não for home, adiciona fundo no header desde o início
+    if (!isHomePage) {
+        header.classList.add('scroll-header');
+    }
+    
     function scrollHeader() {
-        if (this.scrollY >= 50) {
-            header.classList.add('scroll-header');
-        } else {
-            header.classList.remove('scroll-header');
+        // Se for home, só adiciona fundo após scroll
+        if (isHomePage) {
+            if (this.scrollY >= 50) {
+                header.classList.add('scroll-header');
+            } else {
+                header.classList.remove('scroll-header');
+            }
         }
+        // Se não for home, mantém o fundo sempre
     }
     
     window.addEventListener('scroll', scrollHeader);

@@ -95,8 +95,8 @@
   --header-height: 80px;
   
   /* Z-index */
-  --z-fixed: 100;
-  --z-modal: 1000;
+  --z-fixed: 1000;
+  --z-modal: 1100;
 }
 
 /* ==================== RESET E BASE ==================== */
@@ -201,14 +201,15 @@ select {
 
 /* ==================== HEADER / NAVIGATION ==================== */
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  box-shadow: var(--shadow-md);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.15) 50%, transparent 100%);
+  backdrop-filter: blur(5px);
+  box-shadow: none;
   z-index: var(--z-fixed);
-  transition: var(--transition-base);
+  transition: all 0.4s ease;
 }
 
 .nav {
@@ -269,11 +270,28 @@ select {
   transition: var(--transition-fast);
   display: block;
   padding: var(--spacing-sm) 0;
+  position: relative;
 }
 
 .nav__link:hover,
 .nav__link.active {
   color: var(--primary-color);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::after,
+.nav__link.active::after {
+  width: 100%;
 }
 
 .nav__close {
@@ -424,7 +442,8 @@ select {
 
 /* ==================== MAIN CONTENT ==================== */
 .main {
-  margin-top: var(--header-height);
+  margin-top: 0;
+  position: relative;
 }
 
 /* Flash Messages */
@@ -501,6 +520,7 @@ select {
 .page-header {
   padding: var(--spacing-3xl) 0;
   text-align: center;
+  margin-top: var(--header-height);
 }
 
 .page-header__title {
@@ -1665,13 +1685,14 @@ select {
 /* Desktop */
 @media screen and (min-width: 1024px) {
   .nav {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
+    gap: var(--spacing-3xl);
   }
   
   .nav__logo {
-    justify-self: start;
+    flex-shrink: 0;
   }
   
   .nav__menu {
@@ -1681,12 +1702,13 @@ select {
     background-color: transparent;
     box-shadow: none;
     padding: 0;
-    justify-self: center;
+    flex: 0 0 auto;
   }
   
   .nav__list {
     flex-direction: row;
     gap: var(--spacing-2xl);
+    align-items: center;
   }
   
   .nav__link {
@@ -1694,11 +1716,34 @@ select {
     color: var(--white);
     font-weight: var(--font-weight-semibold);
     white-space: nowrap;
+    padding: var(--spacing-sm) 0;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .nav__link::after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #3b82f6;
+    transition: width 0.3s ease;
   }
   
   .nav__link:hover,
   .nav__link.active {
-    color: var(--accent-color);
+    color: var(--white);
+    background-color: transparent;
+    transform: none;
+  }
+  
+  .nav__link:hover::after,
+  .nav__link.active::after {
+    width: 100%;
   }
   
   .nav__cta {
@@ -1829,7 +1874,10 @@ select {
 
 /* ==================== SCROLL BEHAVIOR ==================== */
 .header.scroll-header {
-  box-shadow: var(--shadow-lg);
+  position: fixed;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
 }
 
 /* ==================== UTILITIES ==================== */
@@ -1852,10 +1900,12 @@ select {
 /* ==================== HERO SIMPLE SECTION ==================== */
 .hero-simple {
   position: relative;
-  min-height: 600px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
+  margin-top: 0;
+  padding-top: var(--header-height);
 }
 
 .hero-simple__background {
@@ -1877,11 +1927,10 @@ select {
   left: 0;
   width: 100%;
   height: 100%;
-      background: linear-gradient(135deg, 
-      rgb(30 58 138 / 0%) 0%, 
-      #1a1a2eba 50%, 
-      rgb(37 99 235 / 0%) 100%);
-    z-index: 1;
+  background: linear-gradient(180deg, 
+    rgba(0, 0, 0, 0.4) 0%, 
+    rgba(26, 26, 46, 0.65) 50%, 
+    rgba(0, 0, 0, 0.4) 100%);
   z-index: 1;
 }
 
