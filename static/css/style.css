@@ -1686,9 +1686,8 @@ select {
 @media screen and (min-width: 1024px) {
   .nav {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    gap: var(--spacing-3xl);
   }
   
   .nav__logo {
@@ -1702,12 +1701,12 @@ select {
     background-color: transparent;
     box-shadow: none;
     padding: 0;
-    flex: 0 0 auto;
+    margin-left: auto;
   }
   
   .nav__list {
     flex-direction: row;
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-lg);
     align-items: center;
   }
   
@@ -1726,7 +1725,7 @@ select {
     display: block;
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 7px;
     left: 0;
     width: 0;
     height: 3px;
