@@ -446,6 +446,11 @@ select {
   position: relative;
 }
 
+/* Adiciona margem quando header está fixo em páginas internas */
+body.has-fixed-header .main {
+  margin-top: var(--header-height);
+}
+
 /* Flash Messages */
 .flash-messages {
   padding: var(--spacing-lg) 0;
@@ -1771,6 +1776,17 @@ select {
     display: inline-flex;
   }
   
+  /* Garante que os links mantenham o estilo correto em todas as páginas */
+  .header.scroll-header .nav__link,
+  .header.header--solid .nav__link {
+    color: var(--white);
+  }
+  
+  .header.scroll-header .nav__link::after,
+  .header.header--solid .nav__link::after {
+    background-color: #3b82f6;
+  }
+  
   /* Hero */
   .hero__container {
     grid-template-columns: 1fr 1fr;
@@ -1874,9 +1890,25 @@ select {
 /* ==================== SCROLL BEHAVIOR ==================== */
 .header.scroll-header {
   position: fixed;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(12px);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.15) 100%);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Header transparente para páginas internas */
+.header.header--solid {
+  position: fixed;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.1) 100%);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Garante que o nav funcione corretamente em ambos os estados */
+.header.scroll-header .nav,
+.header.header--solid .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* ==================== UTILITIES ==================== */

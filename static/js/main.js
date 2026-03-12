@@ -60,13 +60,15 @@
     // Verifica se é página com hero-simple (home) ou página interna
     const isHomePage = document.querySelector('.hero-simple');
     
-    // Se não for home, adiciona fundo no header desde o início
-    if (!isHomePage) {
-        header.classList.add('scroll-header');
+    // Se não for home, adiciona classe para header com fundo sólido
+    if (!isHomePage && header) {
+        header.classList.add('header--solid');
+        // Adiciona classe no body para ajustar espaçamento
+        document.body.classList.add('has-fixed-header');
     }
     
     function scrollHeader() {
-        // Se for home, só adiciona fundo após scroll
+        // Se for home, só adiciona fundo após scroll (mantendo transparência)
         if (isHomePage) {
             if (this.scrollY >= 50) {
                 header.classList.add('scroll-header');
@@ -74,7 +76,7 @@
                 header.classList.remove('scroll-header');
             }
         }
-        // Se não for home, mantém o fundo sempre
+        // Se não for home, mantém o fundo sólido sempre
     }
     
     window.addEventListener('scroll', scrollHeader);
