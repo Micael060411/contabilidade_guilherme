@@ -112,8 +112,9 @@
         updateLogo(logoColor) {
             const logos = document.querySelectorAll('.logo-image');
             logos.forEach(logo => {
-                logo.src = `/static/images/logo-${logoColor}.png`;
-                logo.alt = `GS Contabilidade - Logo ${logoColor}`;
+                // Sempre usar logo branca
+                logo.src = `/static/images/logo-branca.png`;
+                logo.alt = `GS Contabilidade`;
             });
         }
 

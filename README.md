@@ -224,7 +224,7 @@ As logos já estão integradas! O sistema troca automaticamente entre 3 versões
 - **Logo Preta**: Para fundos claros
 
 Suas logos estão em `static/images/`:
-- `logo-dourada.png`
+- `logo-branca.png`
 - `logo-branca.png`
 - `logo-preta.png`
 

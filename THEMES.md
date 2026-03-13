@@ -130,7 +130,7 @@ O sistema troca automaticamente entre 3 versões da logo:
 
 ### 🏆 Logo Dourada
 - Usada em: Themes premium e elegantes
-- Arquivo: `logo-dourada.png`
+- Arquivo: `logo-branca.png`
 
 ### ⚫ Logo Preta
 - Usada em: Fundos claros (se necessário)
@@ -250,7 +250,7 @@ Logo: Branca
 // Verifique se as imagens existem
 console.log('Logos:', [
   '/static/images/logo-branca.png',
-  '/static/images/logo-dourada.png',
+  '/static/images/logo-branca.png',
   '/static/images/logo-preta.png'
 ])
 ```
