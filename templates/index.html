@@ -178,37 +178,36 @@
     <div class="about-preview__container container">
         <div class="about-preview__content">
             <span class="section__subtitle">Quem somos</span>
-            <h2 class="section__title">Por que escolher a GS Contabilidade?</h2>
+            <h2 class="section__title">Quem Somos</h2>
             <p class="about-preview__text">
-                A GS Contabilidade é um escritório especializado em soluções contábeis modernas, 
-                focado em pequenas e médias empresas. Atuamos com tecnologia, atendimento humanizado 
-                e total compromisso com a regularidade fiscal dos nossos clientes.
+                A GS Contabilidade nasce da trajetória do contador <strong>Guilherme Nunes de Santana</strong>, que iniciou sua formação em Ciências Contábeis em 2020 e se especializou com pós-graduação em Gestão Tributária e Contabilidade pela UEL em 2023. Com uma visão moderna e estratégica da profissão, Guilherme fundou a GS Contabilidade em 2023, com o propósito de ajudar empresas a crescerem de forma estruturada e a pagarem menos impostos dentro da legalidade.
             </p>
-            <ul class="about-preview__list">
-                <li class="about-preview__item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Atendimento personalizado e humanizado</span>
-                </li>
-                <li class="about-preview__item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Uso de tecnologia e automação</span>
-                </li>
-                <li class="about-preview__item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Linguagem simples e sem "contabilês"</span>
-                </li>
-                <li class="about-preview__item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Suporte rápido via WhatsApp</span>
-                </li>
-            </ul>
+            <p class="about-preview__text">
+                Nosso compromisso vai além da contabilidade tradicional. Atuamos de forma consultiva, oferecendo suporte completo em gestão tributária, gestão financeira e BPO financeiro, sempre focados em gerar economia, organização e segurança para nossos clientes.
+            </p>
+            <p class="about-preview__text">
+                Integramos tecnologia e expertise para entregar um novo conceito de contabilidade: atendimento humano, próximo e direto com o contador. Acreditamos que cada empresa é única e merece acompanhamento personalizado para tomar decisões mais inteligentes.
+            </p>
+            <p class="about-preview__text">
+                Atendemos clientes em diversos estados do Brasil, como Paraná, Santa Catarina, São Paulo e Mato Grosso, com flexibilidade total: o cliente escolhe entre atendimento digital ou presencial.
+            </p>
+            <p class="about-preview__text">
+                <strong>📍 Nossa sede:</strong><br>
+                Av. Souza Naves, nº 565, Centro<br>
+                Ivaiporã – PR
+            </p>
+            <p class="about-preview__text" style="font-weight: 600; color: var(--primary-color);">
+                GS Contabilidade — Estratégia, tecnologia e proximidade para impulsionar o seu negócio.
+            </p>
             <a href="{{ url_for('main.sobre') }}" class="button button--primary">
                 Saiba mais sobre nós
             </a>
         </div>
         <div class="about-preview__image">
             <div class="about-preview__image-wrapper">
-                <i class="fas fa-handshake"></i>
+                <img src="{{ url_for('static', filename='images/foto_contador.jpeg') }}" 
+                     alt="Contador GS Contabilidade"
+                     style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
             </div>
         </div>
     </div>

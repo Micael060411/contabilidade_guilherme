@@ -20,19 +20,31 @@
             <span class="section__subtitle">Nossa História</span>
             <h2 class="section__title">Quem Somos</h2>
             <p class="about__text">
-                A GS Contabilidade é um escritório especializado em soluções contábeis modernas, 
-                focado em pequenas e médias empresas. Atuamos com tecnologia, atendimento humanizado 
-                e total compromisso com a regularidade fiscal dos nossos clientes.
+                A GS Contabilidade nasce da trajetória do contador <strong>Guilherme Nunes de Santana</strong>, que iniciou sua formação em Ciências Contábeis em 2020 e se especializou com pós-graduação em Gestão Tributária e Contabilidade pela UEL em 2023. Com uma visão moderna e estratégica da profissão, Guilherme fundou a GS Contabilidade em 2023, com o propósito de ajudar empresas a crescerem de forma estruturada e a pagarem menos impostos dentro da legalidade.
             </p>
             <p class="about__text">
-                Com mais de 10 anos de experiência no mercado, atendemos empresas de diversos 
-                segmentos, sempre com o objetivo de simplificar a contabilidade e proporcionar 
-                tranquilidade aos nossos clientes.
+                Nosso compromisso vai além da contabilidade tradicional. Atuamos de forma consultiva, oferecendo suporte completo em gestão tributária, gestão financeira e BPO financeiro, sempre focados em gerar economia, organização e segurança para nossos clientes.
+            </p>
+            <p class="about__text">
+                Integramos tecnologia e expertise para entregar um novo conceito de contabilidade: atendimento humano, próximo e direto com o contador. Acreditamos que cada empresa é única e merece acompanhamento personalizado para tomar decisões mais inteligentes.
+            </p>
+            <p class="about__text">
+                Atendemos clientes em diversos estados do Brasil, como Paraná, Santa Catarina, São Paulo e Mato Grosso, com flexibilidade total: o cliente escolhe entre atendimento digital ou presencial.
+            </p>
+            <p class="about__text">
+                <strong>📍 Nossa sede:</strong><br>
+                Av. Souza Naves, nº 565, Centro<br>
+                Ivaiporã – PR
+            </p>
+            <p class="about__text" style="font-weight: 600; color: var(--primary-color);">
+                GS Contabilidade — Estratégia, tecnologia e proximidade para impulsionar o seu negócio.
             </p>
         </div>
         <div class="about__image">
             <div class="about__image-wrapper">
-                <i class="fas fa-building"></i>
+                <img src="{{ url_for('static', filename='images/foto_contador.jpeg') }}" 
+                     alt="Contador GS Contabilidade"
+                     style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
             </div>
         </div>
     </div>
@@ -43,7 +55,7 @@
     <div class="values__container container">
         <div class="section__header">
             <span class="section__subtitle">Nossos Valores</span>
-            <h2 class="section__title">O que nos guia</h2>
+            <h2 class="section__title">💎 Valores</h2>
         </div>
 
         <div class="values__grid">
@@ -51,19 +63,19 @@
                 <div class="value-card__icon">
                     <i class="fas fa-shield-alt"></i>
                 </div>
-                <h3 class="value-card__title">Confiança</h3>
+                <h3 class="value-card__title">Ética e Transparência</h3>
                 <p class="value-card__description">
-                    Construímos relacionamentos duradouros baseados em transparência e ética profissional.
+                    Ética e transparência em todas as relações
                 </p>
             </div>
 
             <div class="value-card">
                 <div class="value-card__icon">
-                    <i class="fas fa-rocket"></i>
+                    <i class="fas fa-bullseye"></i>
                 </div>
-                <h3 class="value-card__title">Inovação</h3>
+                <h3 class="value-card__title">Compromisso com Resultados</h3>
                 <p class="value-card__description">
-                    Utilizamos as melhores tecnologias para otimizar processos e entregar resultados superiores.
+                    Compromisso com resultados dos clientes
                 </p>
             </div>
 
@@ -71,19 +83,49 @@
                 <div class="value-card__icon">
                     <i class="fas fa-heart"></i>
                 </div>
-                <h3 class="value-card__title">Humanização</h3>
+                <h3 class="value-card__title">Atendimento Humano</h3>
                 <p class="value-card__description">
-                    Tratamos cada cliente de forma única, com atenção especial às suas necessidades.
+                    Atendimento humano e personalizado
                 </p>
             </div>
 
             <div class="value-card">
                 <div class="value-card__icon">
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-rocket"></i>
                 </div>
-                <h3 class="value-card__title">Excelência</h3>
+                <h3 class="value-card__title">Inovação e Tecnologia</h3>
                 <p class="value-card__description">
-                    Buscamos constantemente a melhoria contínua em nossos serviços e atendimento.
+                    Inovação e uso de tecnologia
+                </p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-card__icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="value-card__title">Agilidade e Eficiência</h3>
+                <p class="value-card__description">
+                    Agilidade e eficiência nos processos
+                </p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-card__icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3 class="value-card__title">Responsabilidade Legal</h3>
+                <p class="value-card__description">
+                    Responsabilidade e conformidade legal
+                </p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-card__icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 class="value-card__title">Parceria e Proximidade</h3>
+                <p class="value-card__description">
+                    Parceria e proximidade com o cliente
                 </p>
             </div>
         </div>
@@ -98,10 +140,9 @@
                 <div class="mission__icon">
                     <i class="fas fa-bullseye"></i>
                 </div>
-                <h3 class="mission__title">Missão</h3>
+                <h3 class="mission__title">🎯 Missão</h3>
                 <p class="mission__description">
-                    Oferecer soluções contábeis de excelência, simplificando a gestão fiscal e 
-                    tributária para que nossos clientes possam focar no crescimento de seus negócios.
+                    Oferecer soluções contábeis e consultivas com excelência, utilizando tecnologia e atendimento humano para ajudar empresas a crescerem com segurança, organização financeira e economia tributária dentro da legalidade.
                 </p>
             </div>
 
@@ -109,10 +150,9 @@
                 <div class="mission__icon">
                     <i class="fas fa-eye"></i>
                 </div>
-                <h3 class="mission__title">Visão</h3>
+                <h3 class="mission__title">🚀 Visão</h3>
                 <p class="mission__description">
-                    Ser referência em contabilidade moderna, reconhecida pela qualidade do 
-                    atendimento e pela utilização de tecnologia a favor dos nossos clientes.
+                    Ser reconhecida como referência em contabilidade consultiva na região e no ambiente digital, destacando-se pela proximidade com o cliente, inovação tecnológica e geração real de resultados para as empresas atendidas.
                 </p>
             </div>
         </div>
